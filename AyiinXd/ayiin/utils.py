@@ -58,7 +58,7 @@ async def autopilot():
     try:
         r = await bot(
             CreateChannelRequest(
-                title="𝚁ᴇɴɴ-Usᴇʀʙᴏᴛ Lᴏɢs",
+                title="Rᴇɴɴ-Usᴇʀʙᴏᴛ Lᴏɢs",
                 about="» Group log Created by: Renn-Userbot\n\n» Support : @AyiinXdSupport\n» Support: @AyiinSupport",
                 megagroup=True,
             ),
@@ -161,7 +161,7 @@ async def autobot():
             await asyncio.sleep(1)
             await bot.send_message(bf, f"@{username}")
             await asyncio.sleep(1)
-            await bot.send_file(bf, filogo)
+            await bot.send_file(bf, "AyiinXd/resources/20220613_050648.jpg")
             await asyncio.sleep(3)
             await bot.send_message(bf, "/setabouttext")
             await asyncio.sleep(1)
@@ -205,7 +205,7 @@ async def autobot():
         await asyncio.sleep(1)
         await bot.send_message(bf, f"@{username}")
         await asyncio.sleep(1)
-        await bot.send_file(bf, filogo)
+        await bot.send_file(bf, "AyiinXd/resources/20220613_050648.jpg")
         await asyncio.sleep(3)
         await bot.send_message(bf, "/setabouttext")
         await asyncio.sleep(1)
