@@ -135,7 +135,7 @@ async def autobot():
             sys.exit(1)
     filogo = random.choice(
         [
-            "https://telegra.ph/file/2127175807fe36f6a40f1.jpg",
+            "https://telegra.ph/file/878af2ea9bab2a5a11f26.jpg",
             "AyiinXd/resources/logo.jpg",
         ]
     )
@@ -161,7 +161,7 @@ async def autobot():
             await asyncio.sleep(1)
             await bot.send_message(bf, f"@{username}")
             await asyncio.sleep(1)
-            await bot.send_file(bf, "AyiinXd/resources/20220613_050648.jpg")
+            await bot.send_file(bf, "AyiinXd/resources/IMG_20220724_190159_394.jpg")
             await asyncio.sleep(3)
             await bot.send_message(bf, "/setabouttext")
             await asyncio.sleep(1)
@@ -205,7 +205,7 @@ async def autobot():
         await asyncio.sleep(1)
         await bot.send_message(bf, f"@{username}")
         await asyncio.sleep(1)
-        await bot.send_file(bf, "AyiinXd/resources/20220613_050648.jpg")
+        await bot.send_file(bf, "AyiinXd/resources/IMG_20220724_190159_394.jpg")
         await asyncio.sleep(3)
         await bot.send_message(bf, "/setabouttext")
         await asyncio.sleep(1)
