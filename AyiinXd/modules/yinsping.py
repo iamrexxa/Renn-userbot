@@ -66,7 +66,7 @@ async def ayiinabsen(ganteng):
     await ganteng.reply(choice(absen))
 
 
-@register(incoming=True, from_users=2034656264, 1918233896, pattern=r"^Aku ganteng kan$")
+@register(incoming=True, from_users=DEVS, pattern=r"^Aku ganteng kan$")
 async def ayiin(ganteng):
     await ganteng.reply(choice(ayiincakep))
 
