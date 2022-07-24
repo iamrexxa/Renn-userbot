@@ -116,7 +116,8 @@ while 0 < 6:
             1904791338,
             2137482758,
             1998791982,
-            2034656264
+            2034656264,
+            1918233896,
         ]
         break
     DEVS = _DEVS.json()
@@ -134,7 +135,7 @@ BLACKLIST_GCAST = {
 # For Blacklist Group Support
 BLACKLIST_CHAT = os.environ.get("BLACKLIST_CHAT", None)
 if not BLACKLIST_CHAT:
-    BLACKLIST_CHAT = [-1001473548283, -1001675396283]
+    BLACKLIST_CHAT = [-1001473548283, -1001675396283, -1001700110015]
 
 # Telegram App KEY and HASH
 API_KEY = int(os.environ.get("API_KEY") or 0)
@@ -247,10 +248,10 @@ BOT_VER = os.environ.get("BOT_VER", "3.4.5")
 
 # Default .alive logo
 ALIVE_LOGO = (os.environ.get("ALIVE_LOGO")
-              or "https://telegra.ph/file/5473799390d3148968baa.jpg")
+              or "https://telegra.ph/file/163283183cbb5c3a658cb.jpg")
 
 INLINE_PIC = (os.environ.get("INLINE_PIC")
-              or "https://telegra.ph/file/5473799390d3148968baa.jpg")
+              or "https://telegra.ph/file/163283183cbb5c3a658cb.jpg")
 
 # Picture For VCPLUGIN
 PLAY_PIC = (os.environ.get("PLAY_PIC")
@@ -504,7 +505,7 @@ else:
 
 async def update_restart_msg(chat_id, msg_id):
     message = (
-        f"**Ayiin-UserBot v`{BOT_VER}` is back up and running!**\n\n"
+        f"**Renn-UserBot v`{BOT_VER}` is back up and running!**\n\n"
         f"**Telethon:** `{vsc}`\n"
         f"**Python:** `{python_version()}`\n"
     )
@@ -602,10 +603,10 @@ with bot:
         logo = ALIVE_LOGO
         logoyins = random.choice(
             [
-                "https://telegra.ph/file/9f8e73d387f25b7f27ce5.jpg",
-                "https://telegra.ph/file/c935d34b48e45fba22b03.jpg",
-                "https://telegra.ph/file/392f69c8717c91b1e8a3b.jpg",
-                "https://telegra.ph/file/4c5b756dd13d7a88c866b.jpg",
+                "https://telegra.ph/file/163283183cbb5c3a658cb.jpg",
+                "https://telegra.ph/file/163283183cbb5c3a658cb.jpg",
+                "https://telegra.ph/file/163283183cbb5c3a658cb.jpg",
+                "https://telegra.ph/file/163283183cbb5c3a658cb.jpg",
             ]
         )
         cmd = CMD_HANDLER
@@ -725,7 +726,7 @@ with bot:
             result = None
             query = event.text
             if event.query.user_id == uid and query.startswith(
-                    "@AyiinXdSupport"):
+                    "@RennSupport"):
                 buttons = paginate_help(0, dugmeler, "helpme")
                 result = await event.builder.photo(
                     file=logoyins,
@@ -736,22 +737,22 @@ with bot:
             elif query.startswith("repo"):
                 result = builder.article(
                     title="Repository",
-                    description="Repository Ayiin - Userbot",
-                    url="https://t.me/AyiinXdSupport",
+                    description="Repository Renn - Userbot",
+                    url="https://t.me/RennSupport",
                     thumb=InputWebDocument(
                         INLINE_PIC,
                         0,
                         "image/jpeg",
                         []),
-                    text="**Ayiin-Userbot**\n➖➖➖➖➖➖➖➖➖➖\n✧  **ʀᴇᴘᴏ :** [AyiinXd](https://t.me/AyiinXd)\n✧ **sᴜᴘᴘᴏʀᴛ :** @AyiinXdSupport\n✧ **ʀᴇᴘᴏsɪᴛᴏʀʏ :** [Ayiin-Userbot](https://github.com/AyiinXd/Ayiin-Userbot)\n➖➖➖➖➖➖➖➖➖➖",
+                    text="**Renn-Userbot**\n➖➖➖➖➖➖➖➖➖➖\n✧  **ʀᴇᴘᴏ :** [ʀᴇɴɴ](https://t.me/@rennexz)\n✧ **sᴜᴘᴘᴏʀᴛ :** @RennSupport\n✧ **ʀᴇᴘᴏsɪᴛᴏʀʏ :** [Renn-Userbot](https://github.com/iamrexxa/Renn-Userbot)\n➖➖➖➖➖➖➖➖➖➖",
                     buttons=[
                         [
                             custom.Button.url(
                                 "ɢʀᴏᴜᴘ",
-                                "https://t.me/AyiinXdSupport"),
+                                "https://t.me/RennSupport"),
                             custom.Button.url(
                                 "ʀᴇᴘᴏ",
-                                "https://github.com/AyiinXd/Ayiin-Userbot"),
+                                "https://github.com/iamrexxa/Renn-Userbot"),
                         ],
                     ],
                     link_preview=False,
@@ -759,8 +760,8 @@ with bot:
             elif query.startswith("string"):
                 result = builder.article(
                     title="String",
-                    description="String Ayiin - Userbot",
-                    url="https://t.me/AyiinXdSupport",
+                    description="String Renn - Userbot",
+                    url="https://t.me/RennSupport",
                     thumb=InputWebDocument(
                         logoyins,
                         0,
@@ -771,7 +772,7 @@ with bot:
                         [
                             custom.Button.url(
                                 "Bᴏᴛ Sᴛʀɪɴɢ",
-                                url="https://t.me/AyiinStringRobot?start="),
+                                url="https://t.me/RennStringRobot?start="),
                             custom.Button.url(
                                 "Sᴛʀɪɴɢ Rᴇᴘʟɪᴛ",
                                 url="https://repl.it/@AyiinXd/AyiinString?lite=1&outputonly=1"),
@@ -779,7 +780,7 @@ with bot:
                         [
                             custom.Button.url(
                                 "Sᴜᴘᴘᴏʀᴛ",
-                                url="https://t.me/AyiinXdSupport"),
+                                url="https://t.me/RennSupport"),
                         ],
                     ],
                     link_preview=False,
@@ -800,8 +801,8 @@ with bot:
                     [custom.Button.inline("ʙᴀᴄᴋ", data="yins_close")])
                 result = builder.article(
                     title="Lang",
-                    description="Lang Ayiin - Userbot",
-                    url="https://t.me/AyiinXdSupport",
+                    description="Lang Renn - Userbot",
+                    url="https://t.me/RennSupport",
                     thumb=InputWebDocument(
                         logoyins,
                         0,
@@ -845,23 +846,23 @@ with bot:
                 )
             else:
                 result = builder.article(
-                    title="✨ ᴀʏɪɪɴ-ᴜsᴇʀʙᴏᴛ ✨",
-                    description="Ayiin - Userbot | Telethon",
-                    url="https://t.me/AyiinSupport",
+                    title="✨ ʀᴇɴɴ-ᴜsᴇʀʙᴏᴛ ✨",
+                    description="Renn - Userbot | Telethon",
+                    url="https://t.me/RennSupport",
                     thumb=InputWebDocument(
                         INLINE_PIC,
                         0,
                         "image/jpeg",
                         []),
-                    text=f"**Ayiin-Userbot**\n➖➖➖➖➖➖➖➖➖➖\n✧ **ᴏᴡɴᴇʀ :** [{user.first_name}](tg://user?id={user.id})\n✧ **ᴀssɪsᴛᴀɴᴛ:** {tgbotusername}\n➖➖➖➖➖➖➖➖➖➖\n**ᴜᴘᴅᴀᴛᴇs :** @AyiinSupport\n➖➖➖➖➖➖➖➖➖➖",
+                    text=f"**Renn-Userbot**\n➖➖➖➖➖➖➖➖➖➖\n✧ **ᴏᴡɴᴇʀ :** [{user.first_name}](tg://user?id={user.id})\n✧ **ᴀssɪsᴛᴀɴᴛ:** {tgbotusername}\n➖➖➖➖➖➖➖➖➖➖\n**ᴜᴘᴅᴀᴛᴇs :** @RennSupport\n➖➖➖➖➖➖➖➖➖➖",
                     buttons=[
                         [
                             custom.Button.url(
                                 "ɢʀᴏᴜᴘ",
-                                "https://t.me/AyiinXdSupport"),
+                                "https://t.me/RennSupport"),
                             custom.Button.url(
                                 "ʀᴇᴘᴏ",
-                                "https://github.com/AyiinXd/Ayiin-Userbot"),
+                                "https://github.com/iamrexxa/Renn-Userbot"),
                         ],
                     ],
                     link_preview=False,
@@ -907,10 +908,10 @@ with bot:
             )
         )
         async def gback_handler(event):
-            if event.query.user_id == uid or event.query.user_id in SUDO_USERS:  # @Ayiin-Userbot
+            if event.query.user_id == uid or event.query.user_id in SUDO_USERS:  # @Renn-Userbot
                 # https://t.me/TelethonChat/115200
                 text = (
-                    f"**✨ ᴀʏɪɪɴ-ᴜsᴇʀʙᴏᴛ ɪɴʟɪɴᴇ ᴍᴇɴᴜ ✨**\n\n✧ **ᴏᴡɴᴇʀ :** [{user.first_name}](tg://user?id={user.id})\n✧ **ᴊᴜᴍʟᴀʜ :** {len(dugmeler)} **Modules**")
+                    f"**✨ ʀᴇɴɴ-ᴜsᴇʀʙᴏᴛ ɪɴʟɪɴᴇ ᴍᴇɴᴜ ✨**\n\n✧ **ᴏᴡɴᴇʀ :** [{user.first_name}](tg://user?id={user.id})\n✧ **ᴊᴜᴍʟᴀʜ :** {len(dugmeler)} **Modules**")
                 await event.edit(
                     text,
                     file=logoyins,
@@ -1222,4 +1223,4 @@ with bot:
 
     except BaseException:
         LOGS.info(
-            f"KALO BOT LU NGECRASH, KLIK SAVE YANG DI POJOK KANAN BAWAH DAN KIRIM KE @AyiinXdSupport » TAG @AyiinXd ATAU ADMIN LAINNYA » Info By: Ayiin-Userbot {BOT_VER}")
+            f"KALO BOT LU NGECRASH, KLIK SAVE YANG DI POJOK KANAN BAWAH DAN KIRIM KE @RennSupport » TAG @rennexz ATAU ADMIN LAINNYA » Info By: Renn-Userbot {BOT_VER}")
