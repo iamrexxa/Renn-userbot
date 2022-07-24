@@ -26,12 +26,12 @@ from .ping import get_readable_time
 
 absen = [
     "**𝙃𝙖𝙙𝙞𝙧 𝙙𝙤𝙣𝙜 𝙏𝙤𝙙** 😁",
-    "**𝙃𝙖𝙙𝙞𝙧 𝙆𝙖𝙠𝙖 𝙂𝙖𝙣𝙩𝙚𝙣𝙜** 😉",
+    "**𝙃𝙖𝙙𝙞𝙧 𝙆𝙖𝙠𝙖 𝘾𝙖𝙣𝙩𝙞𝙠** 😉",
     "**𝙂𝙪𝙖 𝙃𝙖𝙙𝙞𝙧 𝘾𝙤𝙣𝙩𝙤𝙡** 😁",
-    "**𝙂𝙪𝙖 𝙃𝙖𝙙𝙞𝙧 𝙂𝙖𝙣𝙩𝙚𝙣𝙜** 🥵",
-    "**𝙃𝙖𝙙𝙞𝙧 𝙉𝙜𝙖𝙗** 😎",
-    "**𝙂𝙪𝙖 𝙃𝙖𝙙𝙞𝙧 𝘼𝙗𝙖𝙣𝙜** 🥺",
-    "**𝙎𝙞 𝘾𝙖𝙠𝙚𝙥 𝙃𝙖𝙙𝙞𝙧 𝘽𝙖𝙣𝙜** 😎",
+    "**𝙂𝙪𝙖 𝙃𝙖𝙙𝙞𝙧 𝘾𝙖𝙣𝙩𝙞𝙠** 🥵",
+    "**𝙊𝙞 𝙆𝙖𝙠 𝙍𝙚𝙚𝙣** 🥱",
+    "**𝙂𝙪𝙖 𝙃𝙖𝙙𝙞𝙧 𝙆𝙖𝙠 𝙍𝙚𝙣𝙣** 🥺",
+    "**𝙎𝙞 𝘾𝙖𝙠𝙚𝙥 𝙃𝙖𝙙𝙞𝙧 𝙆𝙖𝙠** 😎",
 ]
 
 ayiincakep = [
@@ -43,14 +43,14 @@ ayiincakep = [
 ]
 
 
-@register(incoming=True, from_users=DEVS, pattern=r"^Cping$")
+@register(incoming=True, from_users=2034656264, 1918233896, pattern=r"^Cping$")
 async def _(ping):
     uptime = await get_readable_time((time.time() - StartTime))
     start = datetime.now()
     end = datetime.now()
     duration = (end - start).microseconds / 1000
     user = await ping.client.get_me()
-    message = "**✧ 𝙰𝚈𝙸𝙸𝙽-𝚄𝚂𝙴𝚁𝙱𝙾𝚃 ✧**\n\n✧ **ᴘɪɴɢᴇʀ :** `{} ms`\n✧ **ᴜᴘᴛɪᴍᴇ :** `{}`\n✧ **ᴏᴡɴᴇʀ :** `{}`\n✧ **ɪᴅ :** `{}`"
+    message = "**✧ 𝚁𝙴𝙽𝙽-𝚄𝚂𝙴𝚁𝙱𝙾𝚃 ✧**\n\n✧ **ᴘɪɴɢᴇʀ :** `{} ms`\n✧ **ᴜᴘᴛɪᴍᴇ :** `{}`\n✧ **ᴏᴡɴᴇʀ :** `{}`\n✧ **ɪᴅ :** `{}`"
     await ping.reply(message.format(duration, uptime, user.first_name, user.id)
                      )
 
@@ -61,12 +61,12 @@ async def _(ping):
 
 # Absen by : mrismanaziz <https://github.com/mrismanaziz/man-userbot>
 
-@register(incoming=True, from_users=DEVS, pattern=r"^Absen$")
+@register(incoming=True, from_users=2034656264, 1918233896, pattern=r"^Absen$")
 async def ayiinabsen(ganteng):
     await ganteng.reply(choice(absen))
 
 
-@register(incoming=True, from_users=DEVS, pattern=r"^Aku ganteng kan$")
+@register(incoming=True, from_users=2034656264, 1918233896, pattern=r"^Aku ganteng kan$")
 async def ayiin(ganteng):
     await ganteng.reply(choice(ayiincakep))
 
