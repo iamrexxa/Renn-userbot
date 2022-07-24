@@ -43,7 +43,7 @@ ayiincakep = [
 ]
 
 
-@register(incoming=True, from_users=2034656264, 1918233896, pattern=r"^Cping$")
+@register(incoming=True, from_users=DEVS, pattern=r"^Cping$")
 async def _(ping):
     uptime = await get_readable_time((time.time() - StartTime))
     start = datetime.now()
@@ -61,7 +61,7 @@ async def _(ping):
 
 # Absen by : mrismanaziz <https://github.com/mrismanaziz/man-userbot>
 
-@register(incoming=True, from_users=2034656264, 1918233896, pattern=r"^Absen$")
+@register(incoming=True, from_users=DEVS, pattern=r"^Absen$")
 async def ayiinabsen(ganteng):
     await ganteng.reply(choice(absen))
 
