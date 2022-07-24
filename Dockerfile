@@ -4,13 +4,13 @@
 
 FROM ayiinxd/ayiin-userbot:buster
 
-RUN git clone -b Ayiin-Userbot https://github.com/AyiinXd/Ayiin-Userbot /home/ayiinuserbot/ \
-    && chmod 777 /home/ayiinuserbot \
+RUN git clone -b Renn-Userbot https://github.com/iamrexxa/Renn-Userbot /home/rennuserbot/ \
+    && chmod 777 /home/rennuserbot \
     && mkdir /home/ayiinuserbot/bin/
 
-COPY ./sample_config.env ./config.env* /home/ayiinuserbot/
+COPY ./sample_config.env ./config.env* /home/rennuserbot/
 
-WORKDIR /home/ayiinuserbot/
+WORKDIR /home/rennuserbot/
 
 RUN pip install -r requirements.txt
 
